@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace ConsoleApp1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("국어점수 ");
-            int kor = int.Parse(Console.ReadLine());
+            Console.WriteLine("정수를 입력하고 마지막에 0을 입력하세요 ");
+            int n, sum = 0, count = 0;
+            while (true)
+            {
+                n = int.Parse(Console.ReadLine());
+                if (n == 0)
+                    break;
 
-            Console.Write("영어점수 ");
-            int eng = int.Parse(Console.ReadLine());
-
-            Console.Write("수학점수 ");
-            int math = int.Parse(Console.ReadLine());
-
-            int sum = kor + eng + math;
-            double avg = sum / 3;
-            Console.Write("총점 {0} 평균 {1:F1}", sum, avg);
-        }   
+                sum += n;
+                count++;
+            }
+            Console.WriteLine("수의 개수는 {0}개이며, 평균은 {1}입니다.", count, sum/count);
+        }
     }
 }
