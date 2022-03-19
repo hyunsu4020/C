@@ -4,36 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("부호입력 (+,-,*,/): ");
-            string op = Console.ReadLine();
+            Console.Write("국어점수 ");
+            string sKor = Console.ReadLine();
+            int kor = Convert.ToInt32(sKor);
 
-            Console.WriteLine("두 수 입력 : ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            int result = 0;
+            Console.Write("영어점수 ");
+            string sEng = Console.ReadLine();
+            int eng = Convert.ToInt32(sEng);
 
-            switch (op)
-            {
-                case "+":
-                    result = a + b;
-                    break;
-                case "-":
-                    result = a - b;
-                    break;
-                case "*":
-                    result = a * b;
-                    break;
-                case "/":
-                    result = a / b;
-                    break;
-            }
-            Console.WriteLine("{0} {1} {2} = {3}", a, op, b, result);
-        }
+            Console.Write("수학점수 ");
+            string sMath = Console.ReadLine();
+            int math = Convert.ToInt32(sMath);
+
+            int sum = kor + eng + math;
+            double avg = sum / 3;
+            Console.Write("총점 {0} 평균 {1}", sum, avg);
+        }   
     }
 }
