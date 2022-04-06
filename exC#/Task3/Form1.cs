@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace winFormEx2
+namespace winFormEx1
 {
     public partial class Form1 : Form
     {
@@ -17,64 +17,73 @@ namespace winFormEx2
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {   // 주문하기 버튼
+            int sum = 0;
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+
+            if (rb1.Checked == true)
+            {
+                listBox1.Items.Add("불고기 피자");
+                listBox2.Items.Add("30000");
+                sum += 30000;
+            }
+            if (rb2.Checked == true)
+            {
+                listBox1.Items.Add("콤비네이션 피자");
+                listBox2.Items.Add("35000");
+                sum += 35000;
+            }
+            if (cb1.Checked == true)
+            {
+                listBox1.Items.Add("콜 라");
+                listBox2.Items.Add("1000");
+                sum += 1000;
+            }
+            if (cb2.Checked == true)
+            {
+                listBox1.Items.Add("쥬 스");
+                listBox2.Items.Add("2000");
+                sum += 2000;
+            }
+            if (cb3.Checked == true)
+            {
+                listBox1.Items.Add("커 피");
+                listBox2.Items.Add("3000");
+                sum += 3000;
+            }
+            lblSum.Text = sum.ToString();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void lblDate_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void rb2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-         //   lblDate.Text = e.Start.Date.ToString();
+
         }
 
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
-            lblDate.Text = e.Start.Date.ToShortDateString(); 
+
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            string index = comboBox1.SelectedIndex.ToString(); 
-            pictureBox1.Load("pizza" + index + ".jpg");
-        }
 
-        private void btnSum_Click(object sender, EventArgs e)
-        {   // 합계보기 버튼
-            int i, price, sum = 0;
-            listBox1.Items.Clear();
-            string index = comboBox1.SelectedIndex.ToString();
-            if (index == "0")
-                listBox1.Items.Add("30000");
-            else if (index == "1")
-                listBox1.Items.Add("35000");
-            else if (index == "2")
-                listBox1.Items.Add("40000");
-
-            string[] ArrPrice = { "5000", "3000" };
-            for (i = 0; i < checkedListBox1.Items.Count; i++)
-            {
-                if (checkedListBox1.GetItemChecked(i) == true)
-                    listBox1.Items.Add(ArrPrice[i]);
-            }
-
-            int count = listBox1.Items.Count;
-            for (i = 0; i < count; i++)
-            {
-                price = Convert.ToInt32(listBox1.Items[i].ToString());
-                sum += price;
-            }
-            maskedTextBox1.Text = sum.ToString();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 frm2 = new Form2();
-            frm2.Show();
         }
     }
 }
