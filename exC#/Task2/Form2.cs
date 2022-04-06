@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace winFormEx2
+namespace winFormEx1
 {
     public partial class Form2 : Form
     {
@@ -17,18 +17,14 @@ namespace winFormEx2
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            string index = comboBox1.SelectedIndex.ToString();
-            if (index == "0")
-                webBrowser1.Navigate("http://www.kyobobook.co.kr/");
-            else if (index == "1")
-                webBrowser1.Navigate("https://www.naver.com/");
+            //lblDate.Text = e.Start.Date.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {   // 종료버튼
-            this.Close();
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            lblDate.Text = e.Start.Date.ToShortDateString();
         }
     }
 }
