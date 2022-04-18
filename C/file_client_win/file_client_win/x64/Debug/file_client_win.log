@@ -1,0 +1,3 @@
+﻿  file_client_win.c
+C:\socket\file_client_win\file_client_win\file_client_win.c(94,41): warning C4133: '함수': 'char *'과(와) 'LPCWSTR' 사이의 형식이 호환되지 않습니다.
+  file_client_win.vcxproj -> C:\socket\file_client_win\x64\Debug\file_client_win.exe
