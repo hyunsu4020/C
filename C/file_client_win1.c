@@ -7,7 +7,7 @@
 #include <string.h>
 #include <winsock2.h>
 
-#define BUFSIZE 30
+#define BUFSIZE 100
 void ErrorHandling(char *message);
 
 int main(int argc, char **argv)
@@ -18,12 +18,13 @@ int main(int argc, char **argv)
 	char buf[BUFSIZE];
 	FILE* fp;
 	SOCKADDR_IN servAddr;
-	int len;
+	int len, n = 0;
 	
 	if(argc!=3){
 		printf("Usage : %s <IP> <port>\n", argv[0]);
 		exit(1);
 	}
+	printf("Client Running ..\n");
 	
 	fp = fopen("receive.dat", "w");
 	if(fp == NULL)
@@ -48,6 +49,7 @@ int main(int argc, char **argv)
 	/* 데이터를 전송 받아서 파일에 저장한다 */
 	while( (len=recv(hSocket, buf, BUFSIZE, 0)) != 0 )
 	{
+		printf("Data received(%d) = %d \n", ++n, len);		
 		fwrite(buf, sizeof(char), len, fp); 
 	}
 	
@@ -56,6 +58,7 @@ int main(int argc, char **argv)
 
 	fclose(fp);
 	closesocket(hSocket);
+	
 	WSACleanup();
 	return 0;
 }

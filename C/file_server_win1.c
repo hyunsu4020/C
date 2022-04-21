@@ -7,7 +7,7 @@
 #include <string.h>
 #include <winsock2.h>
 
-#define BUFSIZE 30
+#define BUFSIZE 100
 void ErrorHandling(char *message);
 
 int main(int argc, char **argv)
@@ -21,15 +21,17 @@ int main(int argc, char **argv)
 	SOCKADDR_IN servAddr;
 	SOCKADDR_IN clntAddr;
 	int clntAddrSize;
-	int len;
+	int len, n = 0;
+	char stop;
 	
 	if(argc!=2){
 		printf("Usage : %s <port>\n", argv[0]);
 		exit(1);
 	}
+	printf("Server Running ...\n");
 	
 	/* 접속해오는 클라이언트에게 전송해 줄 파일 오픈  */
-	fp = fopen("file_server_win.c", "r");
+	fp = fopen("file_server_win1.c", "r");
 	if(fp == NULL)
 		ErrorHandling("File open error");
 	
@@ -57,8 +59,9 @@ int main(int argc, char **argv)
 		ErrorHandling("accept() error");
 	
 	/* 클라이언트에 데이터 전송 */
-	while(1){	  
+	while(1){	
 		len=fread(buf, sizeof(char), BUFSIZE, fp);
+		printf("Data read(%d) = %d \n", ++n, len);
 		send(hClntSock, buf, len, 0);
 		if(feof(fp)) break;
 	}
@@ -71,9 +74,13 @@ int main(int argc, char **argv)
 	len = recv(hClntSock, buf, BUFSIZE-1, 0);
 	buf[len]=0;
 	fputs(buf, stdout);
+	
 	fclose(fp);
 	closesocket(hClntSock);
+	
 	WSACleanup();
+	scanf("%c", &stop);
+		
 	return 0;
 }
 
