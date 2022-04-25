@@ -1,5 +1,5 @@
 /*
- * echo_server.c
+ * bnd_server.c
  */
 
 #include <stdio.h>
@@ -10,7 +10,8 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 
-#define BUFSIZE 1024
+#define BUFSIZE 100
+
 void error_handling(char *message);
 
 int main(int argc, char **argv)
@@ -23,7 +24,6 @@ int main(int argc, char **argv)
 	struct sockaddr_in serv_addr;
 	struct sockaddr_in clnt_addr;
 	int clnt_addr_size;
-	
 	if(argc!=2){
 		printf("Usage : %s <port>\n", argv[0]);
 		exit(1);
@@ -38,10 +38,10 @@ int main(int argc, char **argv)
 	serv_addr.sin_addr.s_addr=htonl(INADDR_ANY);
 	serv_addr.sin_port=htons(atoi(argv[1]));
 	
-	if(bind(serv_sock, (struct sockaddr*) &serv_addr, sizeof(serv_addr))==-1)
-		error_handling("bind() error");
+	if( bind(serv_sock, (struct sockaddr*) &serv_addr, sizeof(serv_addr))==-1 )
+		error_handling("bind() error"); 
 	
-	if(listen(serv_sock, 5)==-1)
+	if( listen(serv_sock, 5)==-1 ) 
 		error_handling("listen() error");
 	
 	clnt_addr_size=sizeof(clnt_addr);    
@@ -49,11 +49,10 @@ int main(int argc, char **argv)
 	if(clnt_sock==-1)
 		error_handling("accept() error");
 	
-	/* 데이터 수신 및 전송 */
-	while( (str_len=read(clnt_sock,message, BUFSIZE)) != 0){
-		write(clnt_sock, message, str_len);
-		write(1, message, str_len);
-	}
+	sleep(5);
+	str_len=read(clnt_sock, message, BUFSIZE);	/* 메시지 수신 */
+	write(clnt_sock, message, str_len);			/* 메시지 전송 */
+	
 	close(clnt_sock);
 	return 0;
 }
@@ -64,4 +63,3 @@ void error_handling(char *message)
 	fputc('\n', stderr);
 	exit(1);
 }
-
