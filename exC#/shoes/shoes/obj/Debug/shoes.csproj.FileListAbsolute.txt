@@ -1,0 +1,16 @@
+C:\C#\shoes\shoes\bin\Debug\shoes.mdf
+C:\C#\shoes\shoes\bin\Debug\shoes_log.ldf
+C:\C#\shoes\shoes\bin\Debug\shoes.exe.config
+C:\C#\shoes\shoes\bin\Debug\shoes.exe
+C:\C#\shoes\shoes\bin\Debug\shoes.pdb
+C:\C#\shoes\shoes\obj\Debug\shoes.csproj.AssemblyReference.cache
+C:\C#\shoes\shoes\obj\Debug\shoes.csproj.SuggestedBindingRedirects.cache
+C:\C#\shoes\shoes\obj\Debug\shoes.Form1.resources
+C:\C#\shoes\shoes\obj\Debug\shoes.Properties.Resources.resources
+C:\C#\shoes\shoes\obj\Debug\shoes.csproj.GenerateResource.cache
+C:\C#\shoes\shoes\obj\Debug\shoes.csproj.CoreCompileInputs.cache
+C:\C#\shoes\shoes\obj\Debug\shoes.exe
+C:\C#\shoes\shoes\obj\Debug\shoes.pdb
+C:\C#\shoes\shoes\obj\Debug\shoes.Form2.resources
+C:\C#\shoes\shoes\obj\Debug\shoes.Form3.resources
+C:\C#\shoes\shoes\obj\Debug\shoes.Form4.resources
