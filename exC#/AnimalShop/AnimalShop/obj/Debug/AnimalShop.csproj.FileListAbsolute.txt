@@ -1,0 +1,15 @@
+C:\C#\AnimalShop\AnimalShop\bin\Debug\AnimalShop.mdf
+C:\C#\AnimalShop\AnimalShop\bin\Debug\AnimalShop_log.ldf
+C:\C#\AnimalShop\AnimalShop\bin\Debug\AnimalShop.exe.config
+C:\C#\AnimalShop\AnimalShop\bin\Debug\AnimalShop.exe
+C:\C#\AnimalShop\AnimalShop\bin\Debug\AnimalShop.pdb
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.csproj.AssemblyReference.cache
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.csproj.SuggestedBindingRedirects.cache
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.Form1.resources
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.Properties.Resources.resources
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.csproj.GenerateResource.cache
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.csproj.CoreCompileInputs.cache
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.exe
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.pdb
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.Form2.resources
+C:\C#\AnimalShop\AnimalShop\obj\Debug\AnimalShop.Form3.resources
