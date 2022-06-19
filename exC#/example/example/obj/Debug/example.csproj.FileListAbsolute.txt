@@ -1,0 +1,15 @@
+C:\C#\example\example\bin\Debug\example.exe.config
+C:\C#\example\example\bin\Debug\example.exe
+C:\C#\example\example\bin\Debug\example.pdb
+C:\C#\example\example\obj\Debug\example.csproj.AssemblyReference.cache
+C:\C#\example\example\obj\Debug\example.csproj.SuggestedBindingRedirects.cache
+C:\C#\example\example\obj\Debug\example.Form1.resources
+C:\C#\example\example\obj\Debug\example.Form2.resources
+C:\C#\example\example\obj\Debug\example.Form3.resources
+C:\C#\example\example\obj\Debug\example.Properties.Resources.resources
+C:\C#\example\example\obj\Debug\example.csproj.GenerateResource.cache
+C:\C#\example\example\obj\Debug\example.csproj.CoreCompileInputs.cache
+C:\C#\example\example\obj\Debug\example.exe
+C:\C#\example\example\obj\Debug\example.pdb
+C:\C#\example\example\bin\Debug\bookDB.mdf
+C:\C#\example\example\bin\Debug\bookDB_log.ldf
