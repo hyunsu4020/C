@@ -1,0 +1,14 @@
+C:\C#\insta\insta\bin\Debug\insta.mdf
+C:\C#\insta\insta\bin\Debug\insta_log.ldf
+C:\C#\insta\insta\bin\Debug\insta.exe.config
+C:\C#\insta\insta\bin\Debug\insta.exe
+C:\C#\insta\insta\bin\Debug\insta.pdb
+C:\C#\insta\insta\obj\Debug\insta.csproj.AssemblyReference.cache
+C:\C#\insta\insta\obj\Debug\insta.csproj.SuggestedBindingRedirects.cache
+C:\C#\insta\insta\obj\Debug\insta.Form1.resources
+C:\C#\insta\insta\obj\Debug\insta.Properties.Resources.resources
+C:\C#\insta\insta\obj\Debug\insta.csproj.GenerateResource.cache
+C:\C#\insta\insta\obj\Debug\insta.csproj.CoreCompileInputs.cache
+C:\C#\insta\insta\obj\Debug\insta.exe
+C:\C#\insta\insta\obj\Debug\insta.pdb
+C:\C#\insta\insta\obj\Debug\insta.Form2.resources
